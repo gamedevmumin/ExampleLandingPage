@@ -88,7 +88,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
   justify-items: center;
-  margin: 0 15%;
+  margin: 20px 15%;
   &__item {
     text-align: center;
     padding: 50px;
@@ -103,6 +103,30 @@ body {
     }
     &__description {
       font-size: 1.3em;
+    }
+  }
+}
+
+.footer {
+  height: 100px;
+  background-color: @main-color;
+  padding: 0 10%;
+  &__social-media-list {
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    font-size: 2em;
+    li {
+      padding: 10px;
+    }
+    &__item {
+      display: block;
+    }
+    a {
+      text-decoration: none;
+      color: white;
     }
   }
 }
