@@ -1,4 +1,5 @@
 import React from "react";
+import LabeledButton from "./LabeledButton";
 
 export default function Hero() {
   return (
@@ -11,9 +12,7 @@ export default function Hero() {
           <p className="hero__content-container__description">
             Learn how to code with our new course about webdevelopment.
           </p>
-          <div className="hero__content-container__btn-container">
-            <button className="btn-primary">Download now</button>
-          </div>
+          <LabeledButton labelText="Privacy Policy" buttonText="Download now" />
         </div>
         <div className="hero__content-container__image"></div>
       </div>
