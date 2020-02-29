@@ -3,33 +3,31 @@
 * {
   box-sizing: border-box;
 }
-/* mixins */
-.background-gradient {
-  background: #134e5e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #71b280,
-    #134e5e 80%
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #71b280,
-    #134e5e 80%
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
 body {
   font-family: Inter, X-LocaleSpecific, sans-serif;
 }
 /* global classes */
 
-.btn-primary {
-  padding: 20px;
-  margin-top: 30px;
-  font-size: 1.6em;
+.btn {
   font-weight: bold;
   background-color: #2e9cca;
   color: white;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: #29648a;
+  cursor: pointer;
+}
+
+.btn-primary {
+  .btn();
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 1.6em;
 }
 
 .btn-primary:hover {
@@ -128,5 +126,25 @@ body {
       text-decoration: none;
       color: white;
     }
+  }
+}
+
+.modal {
+  font-size: 2em;
+  padding: 40px;
+  text-align: center;
+  h1 {
+    font-weight: bold;
+  }
+  label {
+    font-size: 1em;
+    margin: 5px;
+    color: gray;
+  }
+  &__mail-input {
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px;
+    border-color: lightgray;
   }
 }

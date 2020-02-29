@@ -10,6 +10,7 @@
     "react-dom": "^16.12.0",
     "react-icons": "^3.9.0",
     "react-scripts": "3.4.0",
+    "reactjs-popup": "^1.5.0",
     "reset.less": "^1.0.5"
   },
   "scripts": {

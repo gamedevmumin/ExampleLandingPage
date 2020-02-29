@@ -1,7 +1,7 @@
 import React from "react";
 import LabeledButton from "./LabeledButton";
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <div className="hero">
       <div className="hero__content-container">
@@ -12,7 +12,11 @@ export default function Hero() {
           <p className="hero__content-container__description">
             Learn how to code with our new course about webdevelopment.
           </p>
-          <LabeledButton labelText="Privacy Policy" buttonText="Download now" />
+          <LabeledButton
+            labelText="Privacy Policy"
+            buttonText="Get it now"
+            onClick={props.onGetItNowButtonClicked}
+          />
         </div>
         <div className="hero__content-container__image"></div>
       </div>

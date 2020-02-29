@@ -4,9 +4,11 @@ export default function LabeledButton(props) {
   return (
     <div>
       <div className="labeled-btn-container">
-        <button className="btn-primary">{props.buttonText}</button>
+        <button onClick={props.onClick} className="btn-primary">
+          {props.buttonText}
+        </button>
         <small>
-          <a href="#"> {props.labelText} </a>
+          <a href="www.xd.pl"> {props.labelText} </a>
         </small>
       </div>
     </div>
