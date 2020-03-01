@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import Hero from "../components/Hero";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
-import PopUpForm from "../components/PopUpForm";
+import PopUp from "../components/PopUp";
 
 export default function MainPage() {
-  const [isFormOpen, setOpen] = useState(false);
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
   const onGetItNowButtonClicked = e => {
     e.preventDefault();
-    setOpen(true);
+    setIsPopUpOpen(true);
   };
 
-  const onFormClose = () => {
-    setOpen(false);
+  const onPopUpClose = () => {
+    setIsPopUpOpen(false);
   };
   return (
     <>
@@ -21,7 +21,7 @@ export default function MainPage() {
       <Content />
       <Footer />
 
-      <PopUpForm open={isFormOpen} onFormClose={onFormClose} />
+      <PopUp open={isPopUpOpen} onPopUpClose={onPopUpClose} />
     </>
   );
 }
