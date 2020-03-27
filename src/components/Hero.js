@@ -1,6 +1,8 @@
 import React from "react";
 import LabeledButton from "./LabeledButton";
 
+import hero_image from "../images/hero-image.png";
+
 export default function Hero(props) {
   return (
     <div className="hero">
@@ -18,7 +20,9 @@ export default function Hero(props) {
             onClick={props.onGetItNowButtonClicked}
           />
         </div>
-        <div className="hero__content-container__image"></div>
+        <div className="hero__content-container__image">
+          <img src={hero_image} alt=""></img>
+        </div>
       </div>
     </div>
   );

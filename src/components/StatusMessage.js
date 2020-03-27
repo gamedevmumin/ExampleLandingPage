@@ -2,16 +2,16 @@ import React from "react";
 
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
-export default function MailStatusMessage(props) {
+export default function StatusMessage(props) {
   return (
     <>
       {props.success ? (
         <>
-          <FaCheckCircle style={{ color: "green" }} /> You've received an email!
+          <FaCheckCircle style={{ color: "green" }} /> {props.successMessage}
         </>
       ) : (
         <>
-          <FaTimesCircle style={{ color: "red" }} /> An error occurred
+          <FaTimesCircle style={{ color: "red" }} /> {props.failureMessage}
         </>
       )}
     </>

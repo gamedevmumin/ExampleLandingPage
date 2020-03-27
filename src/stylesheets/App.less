@@ -59,7 +59,7 @@ body {
   color: white;
   &__content-container {
     display: grid;
-    grid-template-columns: 660px 660px;
+    grid-template-columns: repeat(2, 660px);
     grid-gap: 20px;
     padding: 7% 15%;
     &__title {
@@ -74,9 +74,11 @@ body {
       max-width: 16em;
     }
     &__image {
-      background-image: url("../images/hero-image.png");
-      background-size: cover;
-      border-radius: 2%;
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
@@ -146,5 +148,101 @@ body {
     font-size: 1em;
     margin: 10px;
     border-color: lightgray;
+  }
+}
+@media (max-width: 1400px) {
+  .hero {
+    &__content-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      align-items: center;
+      justify-items: center;
+      .labeled-btn-container {
+        justify-content: center;
+      }
+      &__description {
+        font-size: 1.5em;
+        max-width: 30em;
+      }
+      &__image {
+        width: 0%;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    display: flex;
+    flex: column;
+    justify-content: center;
+    &__content-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      align-items: center;
+      justify-items: center;
+      &__title {
+        font-size: 3em;
+        max-width: 12em;
+      }
+      &__description {
+        font-size: 1.5em;
+        max-width: 20em;
+      }
+      .labeled-btn-container {
+        justify-content: center;
+      }
+      &__image {
+        img {
+          width: 0%;
+        }
+      }
+    }
+  }
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 20px 5%;
+    &__item {
+      padding: 50px 0px;
+    }
+  }
+  .modal {
+    font-size: 1.2em;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    h1 {
+      font-weight: bold;
+    }
+    label {
+      font-size: 0.8em;
+      margin: 5px;
+      color: gray;
+    }
+    &__mail-input {
+      padding: 2px;
+      font-size: 1em;
+      margin: 5px;
+      border-color: lightgray;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .modal {
+    font-size: 0.6em;
+    padding: 10px;
+  }
+  .hero {
+    &__content-container {
+      &__title {
+        font-size: 2.3em;
+        max-width: 8em;
+      }
+      &__description {
+        font-size: 1.2em;
+        max-width: 14em;
+      }
+    }
   }
 }

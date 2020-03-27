@@ -4,7 +4,7 @@ import Popup from "reactjs-popup";
 import "../stylesheets/App.less";
 
 import EmailForm from "./EmailForm";
-import MailStatusMessage from "./MailStatusMessage";
+import StatusMessage from "./StatusMessage";
 
 export default class PopUp extends React.Component {
   constructor(props) {
@@ -31,26 +31,30 @@ export default class PopUp extends React.Component {
 
   render() {
     return (
-      <Popup
-        modal
-        open={this.props.open}
-        closeOnDocumentClick
-        onClose={this.onPopUpClose}
-      >
-        <div className="modal">
-          {!this.state.triedToSentEmail ? (
-            <EmailForm
-              email={this.state.email}
-              handleEmailChange={this.handleEmailChange}
-              onEmailSend={this.onEmailSend}
-            />
-          ) : (
-            <MailStatusMessage
-              success={!this.state.sendingError}
-            ></MailStatusMessage>
-          )}
-        </div>
-      </Popup>
+      <div className="popup">
+        <Popup
+          modal
+          open={this.props.open}
+          closeOnDocumentClick
+          onClose={this.onPopUpClose}
+        >
+          <div className="modal">
+            {!this.state.triedToSentEmail ? (
+              <EmailForm
+                email={this.state.email}
+                handleEmailChange={this.handleEmailChange}
+                onEmailSend={this.onEmailSend}
+              />
+            ) : (
+              <StatusMessage
+                success={!this.state.sendingError}
+                failureMessage={"Something went wrong!"}
+                successMessage={"You've received an email!"}
+              ></StatusMessage>
+            )}
+          </div>
+        </Popup>
+      </div>
     );
   }
 }

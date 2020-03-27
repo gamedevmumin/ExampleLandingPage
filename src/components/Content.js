@@ -25,7 +25,7 @@ export default function Content() {
       description: loremIpsum
     }
   ];
-  const contentItemsHTML = contentItems.map(item => {
+  const contentItemsHTML = contentItems.map((item, index) => {
     return (
       <div className="content__item">
         {item.icon}

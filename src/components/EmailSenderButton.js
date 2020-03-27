@@ -4,7 +4,6 @@ import { sendEmail } from "../functions/EmailSending";
 export default function EmailSenderButton(props) {
   const handleClick = async e => {
     e.preventDefault();
-
     try {
       const response = await sendEmail(
         process.env.REACT_APP_EMAILJS_TEMPLATEID,
@@ -12,7 +11,7 @@ export default function EmailSenderButton(props) {
         process.env.REACT_APP_EMAILJS_USERID
       );
       const isEmailSent = response.status === 200;
-      props.onEmailSend(true, !(response.status === 200));
+      props.onEmailSend(true, !isEmailSent);
     } catch (error) {
       console.log(error);
       props.onEmailSend(true, true);
