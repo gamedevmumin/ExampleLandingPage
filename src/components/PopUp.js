@@ -1,7 +1,7 @@
 import React from "react";
 import Popup from "reactjs-popup";
 
-import "../stylesheets/App.less";
+import "../stylesheets/App.css";
 
 import EmailForm from "./EmailForm";
 import StatusMessage from "./StatusMessage";

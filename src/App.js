@@ -2,7 +2,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 
 import "reset.less";
-import "./stylesheets/App.less";
+import "./stylesheets/App.css";
 
 import MainPage from "./pages/MainPage";
 
