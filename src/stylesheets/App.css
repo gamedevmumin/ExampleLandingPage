@@ -51,7 +51,7 @@ body {
 /* components */
 .hero {
   background-color: #25274d;
-  height: 80vh;
+  height: 80%;
   color: white;
 }
 .hero__content-container {
