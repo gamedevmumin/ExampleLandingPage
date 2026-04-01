@@ -10,7 +10,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-icons": "^3.9.0",
-    "react-scripts": "3.4.0",
+    "react-scripts": "5.0.1",
     "reactjs-popup": "^1.5.0",
     "reset.less": "^1.0.5"
   },
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "css-loader": "^3.4.2",
-    "less": "^3.11.1",
+    "less": "^3.13.1",
     "less-loader": "^5.0.0",
     "style-loader": "^1.1.3"
   }
